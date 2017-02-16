@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:text="Start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startOdo"
+        android:gravity="center_horizontal"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <TextView
+        android:text="Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/endOdo"
+        android:layout_alignRight="@+id/endOdo"
+        android:layout_alignEnd="@+id/endOdo"
+        android:id="@+id/date"
+        android:gravity="center"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="End"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/endOdo"
+        android:layout_below="@+id/startOdo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/holo_red_dark" />
+
+    <TextView
+        android:text="Note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/note"
+        android:gravity="center"
+        android:layout_below="@+id/date"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="?android:attr/textColorTertiary" />
+</RelativeLayout>

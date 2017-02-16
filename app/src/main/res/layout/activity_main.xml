@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.diazapps.odometertracker.MainActivity">
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tabHost"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="1dp">
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/odometer"
+                        android:inputType="number"
+                        android:layout_marginTop="126dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:hint="Current Odometer"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignLeft="@+id/milesDriven"
+                        android:layout_alignStart="@+id/milesDriven" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/milesDriven"
+                        android:hint="Miles driven"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_marginTop="14dp"
+                        android:layout_below="@+id/odometer"
+                        android:layout_centerHorizontal="true" />
+
+                    <EditText
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/notes"
+                        android:hint="Notes"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_alignLeft="@+id/milesDriven"
+                        android:layout_alignStart="@+id/milesDriven" />
+
+                    <Button
+                        android:text="Save"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/doneButton"
+                        android:layout_marginTop="21dp"
+                        android:hint="Odometer"
+                        android:onClick="save"
+                        android:layout_width="100dp"
+                        android:layout_below="@+id/notes"
+                        android:layout_centerHorizontal="true" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/listView"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </TabHost>
+
+</RelativeLayout>

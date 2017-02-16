@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/clearButton"
+            android:textSize="18sp"
+            android:onClick="clear"
+            android:layout_weight=".5" />
+
+        <Button
+            android:text="Export .Txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/exportButton"
+            android:textSize="18sp"
+            android:layout_weight=".5"
+            android:onClick="export" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="Total miles:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="57dp"
+            android:id="@+id/totalMiles"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="normal|bold" />
+    </RelativeLayout>
+
+</FrameLayout>
